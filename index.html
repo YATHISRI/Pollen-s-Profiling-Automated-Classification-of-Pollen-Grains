@@ -1,1 +1,19 @@
 # Dummy file for index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pollen Profiling</title>
+</head>
+<body>
+    <h1>Pollen Profiling - Upload Image</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="image" required>
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction %}
+        <h2>Prediction:</h2>
+        <pre>{{ prediction }}</pre>
+    {% endif %}
+</body>
+</html>
